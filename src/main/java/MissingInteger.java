@@ -5,18 +5,12 @@ public class MissingInteger {
     public MissingInteger(int[]arrayIntegers){
         this.arrayIntegers=arrayIntegers;
     }
-    public int getLengthArrayIntegers(){
-        return arrayIntegers.length;
-    }
-    public int[] getArrayIntegers(){
-        return arrayIntegers;
-    }
     public  int getMissingNumber(){
-        int total = 1,length = getLengthArrayIntegers();
+        int total = 1,length = arrayIntegers.length;
         for (int i = 2; i <= (length + 1); i++)
         {
             total += i;
-            total -= getArrayIntegers()[i - 2];
+            total -= arrayIntegers[i - 2];
         }
         return total;
     }
